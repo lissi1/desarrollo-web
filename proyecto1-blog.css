@@ -1,0 +1,147 @@
+/* =========================================
+   1. RESET & CONFIGURACIÓN BASE
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primario: #2c3e50;    /* Azul oscuro */
+    --acentuado: #e67e22;   /* Naranja tierra */
+    --fondo-gris: #f4f4f4;
+    --texto: #333;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--texto);
+    line-height: 1.6;
+    background-color: white;
+}
+
+/* =========================================
+   2. HEADER & NAVEGACIÓN
+   ========================================= */
+header {
+    background-color: var(--primario);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--acentuado);
+}
+
+/* =========================================
+   3. SECCIÓN HERO (IMAGEN PRINCIPAL)
+   ========================================= */
+.hero img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* =========================================
+   4. CONTENEDOR PRINCIPAL & SECCIONES
+   ========================================= */
+main, #sobre-mi {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#sobre-mi {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+/* =========================================
+   5. ARTÍCULOS (DESTINOS)
+   ========================================= */
+article {
+    margin-bottom: 80px; /* Espacio entre destinos */
+}
+
+article h2 {
+    color: var(--primario);
+    font-size: 2rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--acentuado);
+    display: inline-block;
+}
+
+article img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+/* Pies de foto */
+figcaption {
+    background-color: transparent !important;
+    color: #7f8c8d;
+    margin-top: 5px;
+    font-size: 0.85rem;
+    text-align: left;
+}
+
+.hero figcaption {
+    text-align: center; /* El pie de foto del Hero sí va centrado */
+}
+
+figcaption a {
+    color: var(--acentuado);
+    text-decoration: none;
+}
+
+figcaption a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   6. OTROS ELEMENTOS (CITAS & FOOTER)
+   ========================================= */
+blockquote {
+    border-left: 5px solid var(--acentuado);
+    padding: 20px;
+    margin: 40px 0;
+    background-color: var(--fondo-gris);
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+footer {
+    background-color: var(--primario);
+    color: white;
+    padding: 40px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer a {
+    color: var(--acentuado);
+    text-decoration: none;
+}

@@ -1,0 +1,163 @@
+/* VARIABLES Y RESET (Requisito A) */
+:root {
+    --vino: #630d0d;
+    --dorado: #c5a059;
+    --fondo: #fdfaf5;
+    --texto: #333;
+    --oscuro: #2d1b14;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Usamos la fuente de tu HTML */
+    background-color: var(--fondo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* TÍTULOS CON PLAYFAIR DISPLAY (Requisito B) */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--vino);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* HEADER Y NAVEGACIÓN (Solución 1: Horizontal) */
+header {
+    background-color: white;
+    padding: 20px;
+    border-bottom: 3px solid var(--vino);
+}
+
+nav ul {
+    display: flex; /* Horizontal */
+    justify-content: center; /* Centrado */
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--vino);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--dorado); /* Efecto hover (Requisito G) */
+}
+
+/* HERO SECTION (Requisito G) */
+.hero img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+}
+
+.hero p {
+    background-color: var(--vino);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-style: italic;
+    font-size: 1.4rem;
+}
+
+/* TARJETAS DE PLATOS (Requisito C, D, E) */
+.contenedor-platos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 40px;
+}
+
+.plato {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    border-top: 5px solid var(--vino);
+}
+
+.plato:hover {
+    transform: translateY(-8px);
+}
+
+.plato img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Solución 3: Ocultar autor */
+.contenedor-platos figcaption {
+    display: none;
+}
+
+.precio {
+    color: var(--vino);
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: right;
+}
+
+/* SECCIÓN NOSOTROS (Solución 2: Centrar texto) */
+#nosotros {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#nosotros p {
+    max-width: 800px; /* Centrado y limitado */
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* TABLA DE HORARIOS (Requisito F: Filas Alternas) */
+table {
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: var(--vino);
+    color: white;
+    padding: 15px;
+}
+
+td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f2e6e6; /* Color alternado suave */
+}
+
+/* FOOTER OSCURO (Requisito G) */
+footer {
+    background-color: var(--oscuro);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+    .contenedor-platos figcaption {
+        display: none;
+    }

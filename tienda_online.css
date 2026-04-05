@@ -1,0 +1,181 @@
+/* 1. Reset y Variables */
+:root {
+    --primario: #5d4037;   /* Marrón café */
+    --dorado: #d4a373;     /* Color cera/miel */
+    --fondo: #fefae0;      /* Crema suave */
+    --blanco: #ffffff;
+    --texto: #2b2d42;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* 2. Navegación */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none; /* Quita los puntos del menú */
+    padding: 25px;
+    background-color: var(--blanco);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primario);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* 3. Banner (Requisito G) */
+#banner {
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+}
+
+#banner .hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* REQUISITO G */
+    filter: brightness(0.6);
+}
+
+/* Ocultar créditos visualmente pero mantenerlos en el código */
+figcaption {
+    display: none;
+}
+
+/* 4. Cuadrícula de Productos */
+#productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 60px 10%;
+}
+
+#productos h2 {
+    grid-column: 1 / -1; /* Centra el título arriba de la cuadrícula */
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: var(--primario);
+}
+
+article {
+    background: var(--blanco);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    text-align: center;
+}
+
+article:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+article img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* REQUISITO D */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para las listas de las velas (Sin puntos y centradas) */
+.producto-info ul {
+    list-style: none; /* Quita los puntos de las características */
+    margin-top: 15px;
+}
+
+.producto-info li {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.precio {
+    color: var(--dorado);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* 5. Sobre Nosotros (Centrado Total) */
+#sobre-nosotros {
+    padding: 80px 20px;
+    background-color: var(--blanco);
+}
+
+.contenedor-nosotros {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    text-align: center;     /* Centra el texto */
+}
+
+.contenedor-nosotros h2 {
+    margin-bottom: 20px;
+    color: var(--primario);
+}
+
+.contenedor-nosotros p {
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    max-width: 700px;
+}
+
+.foto-nosotros img {
+    width: 100%;
+    max-width: 600px; /* Tamaño controlado para la foto */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* 6. Footer */
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+footer address {
+    margin-top: 10px;
+    font-style: normal;
+}
+
+footer a {
+    color: var(--dorado);
+    text-decoration: none;
+}

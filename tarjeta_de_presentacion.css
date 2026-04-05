@@ -1,0 +1,113 @@
+/* 1. Reset y Variables */
+:root {
+    --bg-dark: #0f172a;           /* Azul noche profundo */
+    --card-bg: #1e293b;           /* Gris azulado para la tarjeta */
+    --accent-color: #38bdf8;      /* Azul neón tecnológico */
+    --text-primary: #f8fafc;      /* Blanco roto para no cansar la vista */
+    --text-secondary: #94a3b8;    /* Gris para detalles */
+    --font-main: 'Inter', sans-serif;
+    --font-alt: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: var(--font-alt);
+}
+
+/* 2. Contenedor Principal */
+.tarjeta {
+    background-color: var(--card-bg);
+    width: 320px;
+    padding: 2rem;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px); /* Pequeño salto al pasar el ratón */
+}
+
+/* 3. Imagen de Perfil */
+.profile-img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* La hace circular */
+    object-fit: cover;
+    border: 4px solid var(--accent-color);
+    margin-bottom: 1rem;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+}
+
+.profile-img figcaption {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.profile-img a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* 4. Textos */
+h1 {
+    font-family: var(--font-main);
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h2 {
+    color: var(--accent-color);
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    letter-spacing: 2px;
+}
+
+p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 1.5rem 0;
+}
+
+/* 5. Sección de Contacto */
+.contact {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact li {
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    word-break: break-all; /* Evita que el email se salga si es muy largo */
+}
+
+.contact li:last-child {
+    margin-bottom: 0;
+}
+
+.contact strong {
+    color: var(--accent-color);
+    margin-right: 5px;
+}
+    
